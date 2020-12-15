@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP8266:ESP-12E U1
-U 1 1 5FD74F57
-P 5450 3300
-F 0 "U1" H 5450 4065 50  0000 C CNN
-F 1 "ESP-12E" H 5450 3974 50  0000 C CNN
-F 2 "ESP8266:ESP-12E" H 5450 3300 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5450 3300 50  0001 C CNN
-	1    5450 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x06_Male J2
 U 1 1 5FD79311
 P 5400 4400
@@ -56,5 +45,16 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6550 3300 50 
 F 3 "~" H 6550 3300 50  0001 C CNN
 	1    6550 3300
 	-1   0    0    -1  
+$EndComp
+$Comp
+L esp:ESP-12E U1
+U 1 1 5FD810DF
+P 5450 3300
+F 0 "U1" H 5450 4065 50  0000 C CNN
+F 1 "ESP-12E" H 5450 3974 50  0000 C CNN
+F 2 "espfootprint:ESP-12E" H 5450 3300 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5450 3300 50  0001 C CNN
+	1    5450 3300
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
