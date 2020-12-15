@@ -49,42 +49,31 @@ Wire Wire Line
 $Comp
 L Device:R_US R-reset1
 U 1 1 5FD723C5
-P 2750 2600
-F 0 "R-reset1" V 2545 2600 50  0000 C CNN
-F 1 "R10k" V 2636 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2790 2590 50  0001 C CNN
-F 3 "~" H 2750 2600 50  0001 C CNN
-	1    2750 2600
-	0    1    1    0   
+P 2750 2650
+F 0 "R-reset1" H 2650 2450 50  0000 C CNN
+F 1 "R10k" V 2636 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2790 2640 50  0001 C CNN
+F 3 "~" H 2750 2650 50  0001 C CNN
+	1    2750 2650
+	-1   0    0    1   
 $EndComp
 $Comp
-L Switch:SW_Push SW1
+L Switch:SW_Push SWReset1
 U 1 1 5FD7C06A
 P 2400 2600
-F 0 "SW1" H 2400 2885 50  0000 C CNN
-F 1 "SW_Push" H 2400 2794 50  0000 C CNN
-F 2 "Package_DIP:DIP-4_W7.62mm" H 2400 2800 50  0001 C CNN
+F 0 "SWReset1" H 2400 2885 50  0000 C CNN
+F 1 "SWReset" H 2400 2794 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 2400 2800 50  0001 C CNN
 F 3 "~" H 2400 2800 50  0001 C CNN
 	1    2400 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3350 2600 3350 2500
-Wire Wire Line
-	3350 2500 2900 2500
-Wire Wire Line
-	2900 2500 2900 2600
-Text GLabel 2050 2600 0    50   Input ~ 0
+Text GLabel 2150 2800 0    50   Input ~ 0
 v3.3
 Wire Wire Line
-	2050 2600 2150 2600
-Wire Wire Line
-	3050 2800 2150 2800
-Wire Wire Line
-	2150 2800 2150 2600
-Connection ~ 2150 2600
-Wire Wire Line
-	2150 2600 2200 2600
+	3050 2800 2750 2800
 $Comp
 L Device:C CpowerUc1
 U 1 1 5FD7FBE4
@@ -105,8 +94,8 @@ L Switch:SW_Push SW-flash1
 U 1 1 5FD81357
 P 6500 3200
 F 0 "SW-flash1" V 6500 3348 50  0000 L CNN
-F 1 "SW_Push" V 6545 3348 50  0001 L CNN
-F 2 "Package_DIP:DIP-4_W7.62mm" H 6500 3400 50  0001 C CNN
+F 1 "SWflash" V 6545 3348 50  0001 L CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 6500 3400 50  0001 C CNN
 F 3 "~" H 6500 3400 50  0001 C CNN
 	1    6500 3200
 	0    1    1    0   
@@ -263,7 +252,7 @@ L Connector_Generic:Conn_01x08 J2
 U 1 1 5FD86174
 P 3550 2900
 F 0 "J2" H 3630 2892 50  0000 L CNN
-F 1 "Conn_01x08" H 3630 2801 50  0000 L CNN
+F 1 " " H 3630 2801 50  0001 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3550 2900 50  0001 C CNN
 F 3 "~" H 3550 2900 50  0001 C CNN
 	1    3550 2900
@@ -277,7 +266,7 @@ L Connector_Generic:Conn_01x08 J3
 U 1 1 5FD86EB6
 P 5350 2900
 F 0 "J3" H 5430 2892 50  0000 L CNN
-F 1 "Conn_01x08" H 5430 2801 50  0000 L CNN
+F 1 " " H 5430 2801 50  0001 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 5350 2900 50  0001 C CNN
 F 3 "~" H 5350 2900 50  0001 C CNN
 	1    5350 2900
@@ -287,4 +276,55 @@ Connection ~ 5150 3000
 Connection ~ 5150 3100
 Connection ~ 5150 3200
 Connection ~ 5150 3300
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 5FDA0B08
+P 4100 4000
+F 0 "J4" V 4200 3600 50  0000 L CNN
+F 1 "conn1x3" V 4300 3600 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4100 4000 50  0001 C CNN
+F 3 "~" H 4100 4000 50  0001 C CNN
+	1    4100 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5FDA15FD
+P 4400 4300
+F 0 "J5" V 4318 4480 50  0000 L CNN
+F 1 "conn1x3" V 4363 4480 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4400 4300 50  0001 C CNN
+F 3 "~" H 4400 4300 50  0001 C CNN
+	1    4400 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 4100 4300 3800
+Wire Wire Line
+	4400 3800 4400 4100
+Wire Wire Line
+	4500 4100 4500 3800
+Wire Wire Line
+	2050 2600 2200 2600
+Connection ~ 2750 2800
+Wire Wire Line
+	2750 2800 2150 2800
+Wire Wire Line
+	2750 2500 3350 2500
+Wire Wire Line
+	2600 2600 2600 2500
+Wire Wire Line
+	2600 2500 2750 2500
+Connection ~ 2750 2500
+$Comp
+L power:GND #PWR?
+U 1 1 5FD956EB
+P 2050 2600
+F 0 "#PWR?" H 2050 2350 50  0001 C CNN
+F 1 "GND" H 1950 2650 50  0000 C CNN
+F 2 "" H 2050 2600 50  0001 C CNN
+F 3 "" H 2050 2600 50  0001 C CNN
+	1    2050 2600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
